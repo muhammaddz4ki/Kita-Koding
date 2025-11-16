@@ -9,7 +9,7 @@ body {
 }
 
 .login-container {
-    background-color: #ffffff; /* Kotak putih seperti di gambar */
+    background-color: #ffffff; /* Kotak putih */
     padding: 20px 40px;
     border: 1px solid #ccc; /* Border tipis di sekeliling kotak */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
@@ -29,7 +29,7 @@ h1 {
 label {
     display: block; /* Membuat label berada di baris sendiri */
     margin-bottom: 5px;
-    font-weight: normal; /* Mengikuti gaya di gambar, label tidak terlalu tebal */
+    font-weight: normal;
 }
 
 input[type="text"],
@@ -48,8 +48,26 @@ input[type="password"] {
     cursor: pointer;
     font-size: 14px;
     line-height: 1.5;
+    margin-top: 5px; /* Sedikit jarak dari input di atasnya */
 }
 
 .tombol-masuk:hover {
     background-color: #e0e0e0;
+}
+
+/* --- Gaya untuk Tautan Lupa Kata Sandi --- */
+
+.forgot-password-link {
+    text-align: right; /* Posisikan tautan ke kanan */
+    margin-top: 10px; /* Jarak dari tombol "Masuk" */
+}
+
+.forgot-password-link a {
+    font-size: 13px; /* Ukuran font kecil */
+    color: #007bff; /* Warna biru standar untuk tautan */
+    text-decoration: none; /* Hilangkan garis bawah default */
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline; /* Munculkan garis bawah saat disentuh */
 }
