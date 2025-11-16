@@ -1,433 +1,55 @@
-/* 1. Reset dan Pengaturan Dasar */
-:root {
-    --warna-primer: #4F46E5; 
-    --warna-primer-gelap: #4338CA;
-    --warna-sekunder: #1F2937;
-    --warna-latar: #F9FAFB;
-    --warna-teks: #374151;
-    --warna-putih: #FFFFFF;
-    --warna-abu: #E5E7EB;
-    --warna-abu-gelap: #6B7280;
-    --warna-error: #EF4444;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--warna-latar);
-    color: var(--warna-teks);
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Warna latar belakang halaman */
+    display: flex;
+    justify-content: center; /* Pusatkan konten horizontal */
+    align-items: center; /* Pusatkan konten vertikal */
+    min-height: 100vh; /* Tinggi minimum 100% dari viewport */
+    margin: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Offset untuk header sticky */
+.login-container {
+    background-color: #ffffff; /* Kotak putih seperti di gambar */
+    padding: 20px 40px;
+    border: 1px solid #ccc; /* Border tipis di sekeliling kotak */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+    width: 300px; /* Lebar kotak login */
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+h1 {
+    font-size: 32px; /* Ukuran font besar untuk judul "Login" */
+    font-weight: bold;
+    margin-bottom: 25px;
 }
 
-section {
-    padding: 4rem 0;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--warna-sekunder);
-    margin-bottom: 3rem;
+label {
+    display: block; /* Membuat label berada di baris sendiri */
+    margin-bottom: 5px;
+    font-weight: normal; /* Mengikuti gaya di gambar, label tidak terlalu tebal */
 }
 
-/* 2. Header dan Navigasi */
-.header {
-    background-color: var(--warna-putih);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--warna-abu);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+input[type="text"],
+input[type="password"] {
     width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+    border: 1px solid #999; /* Border input */
+    line-height: 1.5; /* Tinggi input */
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--warna-primer);
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--warna-teks);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--warna-primer);
-}
-
-.hamburger-menu {
-    display: none; /* Sembunyi di desktop */
-    font-size: 1.5rem;
-    color: var(--warna-sekunder);
+.tombol-masuk {
+    padding: 8px 15px;
+    border: 1px solid #000; /* Border hitam seperti di gambar */
+    background-color: #f0f0f0; /* Warna latar belakang tombol */
     cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* 3. Hero Section */
-.hero {
-    background-color: var(--warna-putih);
-    padding: 5rem 0;
-    text-align: center;
-}
-.hero h1 { font-size: 3rem; color: var(--warna-sekunder); margin-bottom: 1rem; }
-.hero .tagline { font-size: 1.25rem; color: var(--warna-primer); font-weight: 500; margin-bottom: 2rem; }
-
-.cta-button {
-    background-color: var(--warna-primer);
-    color: var(--warna-putih);
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-.cta-button:hover { background-color: var(--warna-primer-gelap); }
-
-.cta-button.cta-secondary {
-    background-color: var(--warna-putih);
-    color: var(--warna-primer);
-    border: 1px solid var(--warna-primer);
-}
-.cta-button.cta-secondary:hover {
-    background-color: #F5F3FF; /* Latar primer sangat muda */
-}
-
-.text-link {
-    color: var(--warna-primer);
-    text-decoration: none;
-    font-weight: 600;
-}
-.text-link:hover { text-decoration: underline; }
-
-/* 4. Tentang Kami */
-#tentang { background-color: var(--warna-putih); }
-.tentang-content { display: flex; align-items: center; gap: 3rem; }
-.tentang-text { flex: 1; }
-.tentang-image { flex: 1; text-align: center; }
-.tentang-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* 5. Mentor (BARU) */
-.mentor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
-}
-.mentor-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Membuat gambar jadi bulat */
-    object-fit: cover; /* Memastikan gambar terisi penuh */
-    margin-bottom: 1rem;
-    border: 3px solid var(--warna-primer);
-}
-.mentor-card h4 { font-size: 1.25rem; color: var(--warna-sekunder); }
-.mentor-card p { font-size: 0.95rem; color: var(--warna-abu-gelap); }
-
-/* 6. Aktivitas */
-.aktivitas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-.card {
-    background-color: var(--warna-putih);
-    border: 1px solid var(--warna-abu);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.card h3 { font-size: 1.5rem; color: var(--warna-primer); margin-bottom: 1rem; }
-
-/* 7. Event */
-#event { background-color: var(--warna-putih); }
-.event-list { display: flex; flex-direction: column; gap: 1.5rem; }
-.event-item {
-    display: flex;
-    background: var(--warna-putih);
-    border: 1px solid var(--warna-abu);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.event-date {
-    background-color: var(--warna-primer);
-    color: var(--warna-putih);
-    padding: 1.5rem;
-    text-align: center;
-    flex: 0 0 100px;
-}
-.event-date .tanggal { font-size: 2rem; font-weight: 700; display: block; }
-.event-date .bulan { font-size: 1rem; font-weight: 500; display: block; }
-.event-info { padding: 1.5rem; }
-.event-info h3 { font-size: 1.4rem; color: var(--warna-sekunder); }
-.event-info p { font-size: 0.95rem; color: var(--warna-abu-gelap); }
-
-/* 8. Testimoni (BARU) */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-.testimonial-card {
-    background-color: var(--warna-putih);
-    border: 1px solid var(--warna-abu);
-    border-radius: 12px;
-    padding: 2rem;
-    font-style: italic;
-}
-.testimonial-card p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: var(--warna-teks);
-}
-.testimonial-card span {
-    font-weight: 600;
-    font-style: normal;
-    color: var(--warna-primer);
-}
-
-/* 9. Blog Preview (BARU) */
-#blog-preview { background-color: var(--warna-putih); }
-.blog-preview-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-.blog-preview-grid .card a { margin-top: 1rem; display: inline-block; }
-
-/* 10. FAQ (BARU) */
-.faq-container { max-width: 800px; margin: 0 auto; }
-.faq-item {
-    background-color: var(--warna-putih);
-    border: 1px solid var(--warna-abu);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-}
-.faq-question {
-    font-size: 1.2rem;
-    color: var(--warna-sekunder);
-    margin-bottom: 0.5rem;
-    /* Bisa ditambahkan JS untuk accordion (buka-tutup) */
-}
-.faq-answer { font-size: 1rem; }
-
-/* 11. Kontak Form (BARU) */
-#kontak { background-color: var(--warna-putih); }
-#contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background: var(--warna-putih);
-    border: 1px solid var(--warna-abu);
-    border-radius: 12px;
-    padding: 2rem;
-}
-.form-group { margin-bottom: 1.5rem; }
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--warna-abu);
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--warna-primer);
-    box-shadow: 0 0 0 3px #C7D2FE; /* Bayangan fokus */
-}
-
-/* Styling untuk error validasi */
-.form-group input.invalid,
-.form-group textarea.invalid {
-    border-color: var(--warna-error);
-}
-.error-message {
-    color: var(--warna-error);
-    font-size: 0.85rem;
-    display: none; /* Sembunyi, tampil via JS */
-    margin-top: 0.25rem;
-}
-.error-message.show {
-    display: block;
-}
-
-/* 12. Footer */
-.footer {
-    background-color: var(--warna-sekunder);
-    color: var(--warna-latar);
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-/* 13. Modal (BARU) */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Sembunyikan default */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.modal-overlay.show {
-    opacity: 1;
-    visibility: visible;
-}
-.modal-content {
-    background-color: var(--warna-putih);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    /* Animasi muncul */
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-}
-.modal-overlay.show .modal-content {
-    transform: scale(1);
-}
-.modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    color: var(--warna-abu-gelap);
-    cursor: pointer;
-    line-height: 1;
-}
-.modal-close:hover { color: var(--warna-sekunder); }
-.modal-content h2 { margin-bottom: 1rem; color: var(--warna-sekunder); }
-
-/* 14. Halaman Blog (BARU) */
-.page-title {
-    background-color: var(--warna-sekunder);
-    color: var(--warna-putih);
-    padding: 3rem 0;
-    text-align: center;
-}
-.page-title h1 { font-size: 2.5rem; }
-#blog-list .blog-post {
-    margin-bottom: 2rem;
-}
-#blog-list .blog-post img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin: 1rem 0;
-}
-.post-meta {
-    font-size: 0.9rem;
-    color: var(--warna-abu-gelap);
-    display: block;
-    margin-bottom: 1rem;
-}
-
-
-/* 15. Responsif (Media Query untuk HP) */
-@media (max-width: 768px) {
-    .section-title { font-size: 2rem; }
-    .hero h1 { font-size: 2.2rem; }
-
-    /* Navigasi Hamburger */
-    .nav-menu {
-        position: fixed;
-        top: 65px; /* Tepat di bawah header */
-        left: -100%; /* Sembunyi di luar layar */
-        background-color: var(--warna-putih);
-        width: 100%;
-        height: 100vh;
-        transition: left 0.3s ease-in-out;
-    }
-    .nav-menu.active {
-        left: 0; /* Munculkan menu */
-    }
-    .nav-links {
-        flex-direction: column; /* Susun link ke bawah */
-        padding: 2rem;
-    }
-    .nav-links li {
-        margin: 0;
-        width: 100%;
-    }
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid var(--warna-abu);
-    }
-    .hamburger-menu {
-        display: block; /* Tampilkan tombol hamburger */
-    }
-
-    /* Layout Kolom */
-    .tentang-content { flex-direction: column; }
-    .testimonial-grid { grid-template-columns: 1fr; }
-    .blog-preview-grid { grid-template-columns: 1fr; }
-    
-    .event-item { flex-direction: column; }
-    .event-date { flex: 1; display: flex; gap: 1rem; justify-content: center; align-items: center; }
+.tombol-masuk:hover {
+    background-color: #e0e0e0;
 }
