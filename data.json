@@ -1,0 +1,20 @@
+[
+    {
+        "tanggal": "25",
+        "bulan": "NOV",
+        "judul": "Webinar: Pengenalan Web Development (HTML, CSS, JS)",
+        "deskripsi": "Cocok untuk pemula! Kita akan kupas tuntas 3 pilar utama website modern bersama Kak Budi, seorang Frontend Developer senior."
+    },
+    {
+        "tanggal": "02",
+        "bulan": "DES",
+        "judul": "Workshop: Membangun API Pertamamu dengan Node.js",
+        "deskripsi": "Belajar membuat backend service dari nol. Sesi ini akan fokus pada fundamental Express.js dan koneksi ke database (simulasi)."
+    },
+    {
+        "tanggal": "09",
+        "bulan": "DES",
+        "judul": "Kupas Tuntas: React Hooks untuk Manajemen State",
+        "deskripsi": "Pahami useState, useEffect, dan useContext untuk membangun aplikasi React yang lebih bersih dan efisien."
+    }
+]

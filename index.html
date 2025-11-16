@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kita Koding - Kita Belajar Koding Bersama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">Kita Koding</a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#mentor">Mentor</a></li>
+                    <li><a href="#event">Event</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1>Selamat Datang di <strong>Kita Koding</strong></h1>
+                <p class="tagline">Kita Belajar Koding Bersama, Dari Nol Hingga Mahir.</p>
+                <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Bergabunglah dengan komunitas developer suportif di Indonesia.
+                    Tempat berbagi, bertanya, dan bertumbuh bersama.
+                </p>
+                <button class="cta-button" id="open-modal-btn">Gabung Sekarang!</button>
+            </div>
+        </section>
+
+        <section id="tentang">
+            <div class="container tentang-content">
+                <div class="tentang-text">
+                    <h3>Apa itu Kita Koding?</h3>
+                    <p>
+                        Kita Koding adalah komunitas terbuka bagi siapa saja yang tertarik dengan dunia teknologi dan pemrograman. Sesuai dengan nama kami, 'Kita Belajar Koding Bersama', kami percaya bahwa belajar akan lebih efektif dan menyenangkan jika dilakukan bersama-sama.
+                    </p>
+                    <br>
+                    <p>
+                        Visi kami adalah menciptakan ekosistem belajar yang suportif, kolaboratif, dan inklusif bagi semua level, dari pemula yang baru memegang keyboard hingga profesional yang ingin berbagi ilmu.
+                    </Visi>
+                </div>
+                <div class="tentang-image">
+                    <img src="Tim Kita Koding sedang berkolaborasi.png" alt="Tim Kita Koding sedang berkolaborasi">
+                </div>
+            </div>
+        </section>
+
+        <section id="mentor">
+            <div class="container">
+                <h2 class="section-title">Mentor Kami</h2>
+                <div class="mentor-grid">
+                    <div class="mentor-card">
+                        <img src="Mentor Jane Doe.png" alt="Mentor Jane Doe">
+                        <h4>Jane Doe</h4>
+                        <p>Senior Frontend Developer</p>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="Mentor John Smith.png" alt="Mentor John Smith">
+                        <h4>John Smith</h4>
+                        <p>Backend & DevOps Engineer</p>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="Mentor Alex Johnson.png" alt="Mentor Alex Johnson">
+                        <h4>Alex Johnson</h4>
+                        <p>Data Scientist & AI Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="aktivitas">
+            <div class="container">
+                <h2 class="section-title">Aktivitas Kami</h2>
+                <div class="aktivitas-grid">
+                    <div class="card">
+                        <h3>Workshop & Webinar</h3>
+                        <p>Sesi belajar interaktif dengan pemateri ahli di bidangnya, dari dasar HTML hingga Machine Learning.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Proyek Kolaborasi</h3>
+                        <p>Bangun portofolio nyata dengan mengerjakan proyek tim open-source yang bermanfaat bagi komunitas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Forum Diskusi Aktif</h3>
+                        <p>Forum online 24/7 (via Discord/Telegram) sebagai tempat bertanya jawab dan berdiskusi santai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="event">
+            <div class="container">
+                <h2 class="section-title">Event Mendatang</h2>
+                <div class="event-list" id="event-list-container">
+                    <p style="text-align: center;">Memuat event...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni">
+            <div class="container">
+                <h2 class="section-title">Apa Kata Mereka?</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Komunitas ini mengubah cara saya belajar. Mentornya sangat membantu dan materi webinarnya 'daging' semua!"</p>
+                        <span>- Budi, Mahasiswa</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Saya berhasil dapat kerja remote pertama saya setelah ikut proyek kolaborasi di Kita Koding. Sangat direkomendasikan."</p>
+                        <span>- Rina, Junior Developer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-preview">
+            <div class="container">
+                <h2 class="section-title">Artikel Terbaru</h2>
+                <div class="blog-preview-grid">
+                    <div class="card">
+                        <h3>5 Kesalahan Umum Pemula JavaScript</h3>
+                        <p>Pelajari kesalahan yang sering terjadi dan bagaimana cara menghindarinya agar kodinganmu lebih bersih...</p>
+                        <a href="blog.html#artikel-1" class="text-link">Baca Selengkapnya</a>
+                    </div>
+                    <div class="card">
+                        <h3>Mengapa Kamu Harus Belajar DevOps?</h3>
+                        <p>DevOps bukan hanya tentang tools, tapi juga budaya. Pahami perannya dalam industri modern...</p>
+                        <a href="blog.html#artikel-2" class="text-link">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="blog.html" class="cta-button cta-secondary">Lihat Semua Artikel</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h4 class="faq-question">Apakah komunitas ini berbayar?</h4>
+                        <p class="faq-answer">Tidak. Semua event dan sumber daya di Kita Koding 100% gratis dan terbuka untuk siapa saja. Kami didukung oleh donasi dan sponsor.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Saya masih pemula, apakah bisa bergabung?</h4>
+                        <p class="faq-answer">Tentu saja! Kami dirancang untuk semua level. Kami punya banyak materi dan event khusus untuk pemula yang baru memulai perjalanan kodingnya.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Apa platform diskusi utamanya?</h4>
+                        <p class="faq-answer">Kami menggunakan Discord untuk diskusi harian yang aktif dan Telegram untuk pengumuman event. Link ada di modal "Gabung Sekarang".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <div class="container">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">Punya pertanyaan atau proposal kerjasama? Kirimkan pesan di bawah ini.</p>
+                
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        <small class="error-message"></small>
+                    </div>
+                    <button type="submit" class="cta-button">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kita Koding. Dibuat dengan semangat kolaborasi.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="gabung-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="close-modal-btn">&times;</span>
+            <h2>Bergabunglah dengan Komunitas!</h2>
+            <p>Senang sekali kamu tertarik! Diskusi utama kami berlangsung di Discord. Kamu juga bisa ikuti update kami di Telegram.</p>
+            <br>
+            <a href="https://discord.com/" target="_blank" class="cta-button" style="display: block; text-align: center;">
+                <i class="fab fa-discord"></i> Gabung Discord Server
+            </a>
+            <br>
+            <a href="https://telegram.org/" target="_blank" class="cta-button cta-secondary" style="display: block; text-align: center;">
+                <i class="fab fa-telegram"></i> Ikuti Channel Telegram
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
